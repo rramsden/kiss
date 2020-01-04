@@ -1,0 +1,28 @@
+{{- $style := "auto" -}}
+{{- if and (isset site.Params "style") (ne site.Params.style "") -}}
+{{- $style = site.Params.style | lower -}}
+{{- end -}}
+
+{{- $coreCSS := resources.Get "css/style.css" -}}
+
+{{- $themePath := "" -}}
+{{- $theme := "dracula" -}}
+{{- with site.Params.syntax -}}
+{{- $use := "none" -}}
+{{- if and (isset . "use") (ne .use "") -}}{{- $use = .use | lower -}}{{- end -}}
+{{- if and (isset . "theme") (ne .theme "") -}}{{- $theme = .theme | lower -}}{{- end -}}
+
+{{- if eq $use "hljs" -}}
+{{- $themePath = "css/hljs/" -}}
+{{- else if eq $use "prismjs" -}}
+{{- $themePath = "css/prism/" -}}
+{{- end -}}
+{{- end -}}
+
+{{- if eq $themePath "" -}}
+{{- $themePath = "css/chroma/" -}}
+{{- end -}}
+
+{{- $syntaxCSS := resources.Get (print (path.Join $themePath $theme) ".css") -}}
+
+<link rel="stylesheet" href="{{- $coreCSS.RelPermalink -}}" integrity="{{- $coreCSS.Data.Integrity -}}">
