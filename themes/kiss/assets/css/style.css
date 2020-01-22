@@ -6,22 +6,29 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-link-color: #ff8282;
+}
+
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-  font-size: 17px;
+  font-family: 'Merriweather','Georgia', serif;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 28px;
+  font-smooth: always;
 }
 
 body {
   display: block;
-  color: #e5e5e5;
-  background-color: #161616;
+
+  color: hsla(0,0%,100%,0.88);
+  background-color: #282c35;
   margin: 0 auto;
   padding: 0;
   word-wrap: break-word;
 
   text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -50,7 +57,8 @@ h6 {
 }
 
 h1 {
-  font-size: 28px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 32px;
 }
 
 h2 {
@@ -182,7 +190,7 @@ th {
 }
 
 a {
-  color: #007aff;
+  color: var(--main-link-color);
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -506,14 +514,14 @@ strong {
 }
 
 .pagination ul li a {
-  color: #007aff;
+  color: var(--main-link-color);
   float: left;
   padding: 8px 16px;
   text-decoration: none;
 }
 
 .pagination ul li a.active {
-  background-color: #007aff;
+  background-color: var(--main-link-color);
   color: #fff;
 }
 
@@ -532,11 +540,11 @@ strong {
   color: #fff;
 }
 .note.title {
-  color: #ff4828;
+  color: #ffc965;
 }
 
 .article.title {
-  color: #ff4828;
+  color: #ffc965;
   text-align: center;
 }
 
