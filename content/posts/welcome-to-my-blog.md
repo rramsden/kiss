@@ -1,7 +1,7 @@
 ---
 title: "Goal Setting for 2020"
 date: 2020-01-04T23:25:17+09:00
-draft: true
+draft: false
 ---
 
 In 2013, I left Canada for a new life in Japan.  I brought a laptop and a couple
