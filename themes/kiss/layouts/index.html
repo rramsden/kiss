@@ -1,12 +1,11 @@
 {{- define "main" -}}
 
 <p>
-  Hello! Not really sure what to put here... [insert witty self-introduction]. 
-</p>
-
-<p>
-  Anyway, I'm <a href="https://twitter.com/rramsden">Richard Ramsden</a>. Most of my
-  blog posts are on management and programming.
+  Hi I'm <a href="https://twitter.com/rramsden">Richard</a>.
+  <br/>
+  Welcome to another page on the internet.
+  <br/>
+  <br/>
 </p>
 
 {{- $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
